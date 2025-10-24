@@ -56,6 +56,47 @@
 
 //////
 
+// function createMarkup(todos) {
+//   return todos
+//     .map(
+//       ({ id, title, completed }) => `
+//     <li data-id="${id}" class="list-item">
+//         <input type="checkbox"${completed && "checked"}/>
+//         <p>${title}</p>
+//     </li>
+//     `
+//     )
+//     .join("");
+// }
+
+// function foo(url) {
+//   return fetch(url).then((result) => {
+//     if (!result.ok) {
+//       throw new Error(result.status);
+//     }
+//     return result.json();
+//   });
+// }
+
+// foo(`https://jsonplaceholder.typicode.com/todos`)
+//   .then((data) => {
+//     list.insertAdjacentHTML("beforeend", createMarkup(data));
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+// foo(`https://jsonplaceholder.typicode.com/users`)
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+//work endpoint
+
+const list = document.querySelector(".todo-list");
+
 function createMarkup(todos) {
   return todos
     .map(
@@ -69,23 +110,24 @@ function createMarkup(todos) {
     .join("");
 }
 
-function foo(url) {
-  return fetch(url).then((result) => {
-    if (!result.ok) {
-      throw new Error(result.status);
+function foo(endpoint) {
+  return fetch(`https://jsonplaceholder.typicode.com/${endpoint}`).then(
+    (result) => {
+      if (!result.ok) {
+        throw new Error(result.status);
+      }
+      return result.json();
     }
-    return result.json();
-  });
+  );
 }
-
-foo(`https://jsonplaceholder.typicode.com/todos`)
+foo(`todos`)
   .then((data) => {
     list.insertAdjacentHTML("beforeend", createMarkup(data));
   })
   .catch((error) => {
     console.log(error);
   });
-foo(`https://jsonplaceholder.typicode.com/users`)
+foo(`users`)
   .then((data) => {
     console.log(data);
   })
