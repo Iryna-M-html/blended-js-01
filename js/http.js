@@ -139,37 +139,44 @@
 ////1 час продолжение
 ///авторизация запросов ключами
 
-const API_KEY = "43173775-fc7269b10cca3a5d436001063";
+// const API_KEY = "43173775-fc7269b10cca3a5d436001063";
 // https://pixabay.com/api/docs/
-const list = document.querySelector(".list");
+// const list = document.querySelector(".list");
 
-const params = new URLSearchParams({
-  key: API_KEY,
-  q: "red rose",
-});
+// const params = new URLSearchParams({
+//   key: API_KEY,
+//   q: "yellow rose",
+// });
 
-fetch(`https://pixabay.com/api?${params}`)
-  .then((res) => {
-    if (!res.ok) {
-      throw new Error(res.statusText);
-    }
-    return res.json();
-  })
-  .then((data) => {
-    console.log(data);
-    list.insertAdjacentHTML("beforeend", createMarkup(data.hits));
-  })
-  .catch((error) => {
-    console.log(error.message);
-  });
+// fetch(`https://pixabay.com/api?${params}`)
+//   .then((res) => {
+//     if (!res.ok) {
+//       throw new Error(res.statusText);
+//     }
+//     return res.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//     list.insertAdjacentHTML("beforeend", createMarkup(data.hits));
+//   })
+//   .catch((error) => {
+//     console.log(error.message);
+//   });
 
-function createMarkup(arr) {
-  return arr
-    .map(
-      ({ previewURL, tags }) => `
-    <li>
-    <img src = "${previewURL}" alt = "${tags}" width ="300"/>
-    </li>`
-    )
-    .join("");
-}
+// function createMarkup(arr) {
+//   return arr
+//     .map(
+//       ({ previewURL, tags }) => `
+//     <li>
+//     <img src = "${previewURL}" alt = "${tags}" width ="300"/>
+//     </li>`
+//     )
+//     .join("");
+// }
+
+//////
+// fetch(`https://pixabay.com/api?${params}`, {
+//   headers: {
+//     Authorization: `lalalll`,
+//   },
+// });
