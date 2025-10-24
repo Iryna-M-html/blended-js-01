@@ -209,21 +209,52 @@
 // якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
 // якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
 
-function fizzBuzz(num) {
+//function fizzBuzz(num) {
    //if (typeof num !== "number") {
       //console.log("no number")
       //return
    //}
-   if (i % 5 === 0 && i % 3 === 0) {
-      console.log(i,'fizzbuzz');
-   }
-      else if (i % 3 === 0) {
-      console.log(i,'fizz');
-   } else if (i % 5 === 0) {
-      console.log(i,'buzz');
-   }
+   //if (i % 5 === 0 && i % 3 === 0) {
+     // console.log(i,'fizzbuzz');
+   //}
+     // else if (i % 3 === 0) {
+     // console.log(i,'fizz');
+   //} else if (i % 5 === 0) {
+    //  console.log(i,'buzz');
+  // }
    
-}
+//}
    
 
-console.log(fizzBuzz ("20"));
+//console.log(fizzBuzz("20"));
+
+
+//Функція getLength(array) очікує один параметр array - масив довільних значень. Доповни код функції так, щоб вона перетворювала масив у рядок, без роздільників, і повертала кількість символів в отриманому рядку.
+
+//Оголошена функція getLength(array)
+//Виклик getLength(["Mango", "hurries", "to", "the", "train"]) повертає 22
+//Виклик getLength(["M", "a", "n", "g", "o"]) повертає 5
+//Виклик getLength(["top", "picks", "for", "you"]) повертає 14
+
+//const array = ["Mango", "hurries", "to", "the", "train"];
+
+//function getLength(array) {
+   
+   // Перетворюємо масив у рядок без роздільників
+   //const array1 = array.join("");
+   
+   // Повертаємо довжину отриманого рядка
+   //return array1.length;
+    
+//}
+//console.log(array1.length);
+
+
+
+
+
+
+
+
+
+
