@@ -4,10 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Назва сторінки</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <h1>Привіт, світ!</h1>
+    <form class="weather-form">
+      <h2>Введіть назву міста</h2>
+      <input
+        type="text"
+        id="city"
+        name="city"
+        placeholder="Наприклад: Київ"
+        required
+      />
+
+      <div class="row">
+        <select id="days" name="days">
+          <option value="1">1 день</option>
+          <option value="3">3 дні</option>
+          <option value="5">5 днів</option>
+          <option value="7">7 днів</option>
+        </select>
+        <button type="submit">Пошук</button>
+      </div>
+    </form>
+
     <!-- <ul class="todo-list"></ul> -->
     <ul class="list"></ul>
     <!-- <script src="./js/lesson-1.js"></script>
