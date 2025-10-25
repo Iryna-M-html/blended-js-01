@@ -32,6 +32,10 @@ function createMarkup(arr) {
 
 // get запит з допомогою axios
 
-// axios("https://jsonplaceholder.typicode.com/todos").then((res) => {
-//   console.log(res);
-// });
+axios("https://jsonplaceholder.typicode.com/todos")
+  .then((res) => {
+    console.log(res.data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
